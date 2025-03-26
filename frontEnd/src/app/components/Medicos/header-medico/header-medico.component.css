@@ -1,0 +1,60 @@
+/* Header Vertical */
+.header-vertical {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 95vh;
+    width: 250px;
+    background-color: #457b9d; /* Azul médio */
+    color: white;
+    display: flex;
+    flex-direction: column; /* Itens organizados verticalmente */
+    justify-content: flex-start; /* Alinha ao topo */
+    align-items: center;
+    padding: 20px 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  .header-vertical h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .header-vertical nav {
+    display: flex;
+    flex-direction: column; /* Links organizados na vertical */
+    gap: 15px; /* Espaçamento */
+    width: 100%;
+    text-align: center;
+  }
+  
+  .header-vertical a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .header-vertical a.active,
+  .header-vertical a:hover {
+    background-color: #1d3557; /* Azul escuro */
+    font-weight: bold;
+  }
+  
+  .logout-btn {
+    margin-top: auto; /* Posiciona ao final */
+    background-color: #1d3557; /* Azul escuro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-btn:hover {
+    background-color: #457b9d; /* Azul médio */
+  }
+  

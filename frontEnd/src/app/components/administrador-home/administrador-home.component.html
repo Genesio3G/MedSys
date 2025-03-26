@@ -1,0 +1,45 @@
+<div class="dashboard-container">
+    <!-- Menu Lateral -->
+    <aside class="sidebar">
+      <nav>
+        <h2>Menu</h2>
+        <ul>
+          <li><a routerLink="/admin-pagina-hospitais">Hospitais</a></li>
+          <li><a routerLink="/admin-pagina-medicos">Médicos</a></li>
+          <li><a routerLink="/admin-pagina-medicamentos">Medicamentos</a></li>
+          <li><a routerLink="/admin-pagina-funcionarios">Funcionários</a></li>
+        </ul>
+      </nav>
+      
+    </aside>
+  
+    <!-- Conteúdo do Dashboard -->
+    <main class="dashboard-content">
+      <header class="dashboard-header">
+        <h1>Dashboard</h1>
+      </header>
+      <div class="dashboard-cards">
+        <div class="card">
+          <h3>Usuários Cadastrados</h3>
+          <p>{{ usuariosCount }}</p>
+        </div>
+        <div class="card">
+          <h3>Hospitais</h3>
+          <p>{{ hospitaisCount }}</p>
+        </div>
+        <div class="card">
+          <h3>Médicos</h3>
+          <p>{{ medicosCount }}</p>
+        </div>
+        <div class="card">
+          <h3>Medicamentos</h3>
+          <p>{{ medicamentosCount }}</p>
+        </div>
+        <div class="card">
+          <h3>Funcionários</h3>
+          <p>{{ funcionariosCount }}</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  

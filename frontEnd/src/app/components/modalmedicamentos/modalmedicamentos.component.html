@@ -1,0 +1,60 @@
+<div class="modal fade" id="modalMedical" tabindex="-1" aria-labelledby="modalMedicalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <!-- Cabeçalho da Modal -->
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="modalMedicalLabel">💊 Informações de Medicamentos</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+  
+        <!-- Corpo da Modal -->
+        <div class="modal-body" #modalBody>
+          <!-- Campo de Pesquisa Estilizado -->
+          <div class="search-bar mb-4">
+            <input
+              type="text"
+              class="form-control search-input"
+              placeholder="🔍 Pesquisar Medicamentos..."
+              [(ngModel)]="searchTerm"
+              (input)="filterMedicamentos()"
+            />
+          </div>
+  
+          <!-- Lista de Medicamentos em Grade -->
+          <div class="row medicamentos-grid">
+            <div
+              class="col-md-4 mb-4"
+              *ngFor="let medicamento of filterMedicamentos()"
+            >
+              <div class="card h-100">
+                <!-- Imagem do Medicamento -->
+                <div class="card-img-top">
+                  <img
+                    [src]="medicamento.imagem"
+                    class="img-fluid"
+                    [alt]="medicamento.nome"
+                  />
+                </div>
+  
+                <!-- Informações do Medicamento -->
+                <div class="card-body">
+                  <h5 class="card-title">{{ medicamento.nome }}</h5>
+                  <p class="card-text">{{ medicamento.descricao }}</p>
+                </div>
+  
+                <!-- Botão de Detalhes -->
+                <div class="card-footer">
+                  <button class="btn btn-primary">Ver Detalhes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Rodapé da Modal -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>

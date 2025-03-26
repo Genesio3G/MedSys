@@ -1,0 +1,129 @@
+
+<div class="produto-container">
+    <header class="produto-header">
+      <h1>Gerenciamento de Produtos</h1>
+    </header>
+  
+    <!-- Exibir mensagens de erro geral -->
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+  
+    <!-- Formulário de Cadastro/Alteração -->
+    <div class="produto-form">
+      <h2>{{ editMode ? 'Alterar Produto' : 'Cadastrar Produto' }}</h2>
+      <form #produtoForm="ngForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+        <label for="nrRegisto">Número de Registro:</label>
+        <input
+          type="text"
+          id="nrRegisto"
+          [(ngModel)]="produto.nrRegisto"
+          name="nrRegisto"
+          required
+          [readonly]="editMode"
+          #nrRegisto="ngModel" />
+        <div class="error" *ngIf="nrRegisto.invalid && (nrRegisto.dirty || nrRegisto.touched)">
+          Número de Registro é obrigatório.
+        </div>
+  
+        <label for="nomeProduto">Nome do Produto:</label>
+        <input
+          type="text"
+          id="nomeProduto"
+          [(ngModel)]="produto.nomeProduto"
+          name="nomeProduto"
+          required
+          #nomeProduto="ngModel" />
+        <div class="error" *ngIf="nomeProduto.invalid && (nomeProduto.dirty || nomeProduto.touched)">
+          Nome do Produto é obrigatório.
+        </div>
+  
+        <label for="bp">BP:</label>
+        <input
+          type="text"
+          id="bp"
+          [(ngModel)]="produto.bp"
+          name="bp"
+          required
+          #bp="ngModel" />
+        <div class="error" *ngIf="bp.invalid && (bp.dirty || bp.touched)">
+          BP é obrigatório.
+        </div>
+  
+        <label for="dataFabrico">Data de Fabrico:</label>
+        <input
+          type="date"
+          id="dataFabrico"
+          [(ngModel)]="produto.dataFabrico"
+          name="dataFabrico"
+          required
+          #dataFabrico="ngModel" />
+        <div class="error" *ngIf="dataFabrico.invalid && (dataFabrico.dirty || dataFabrico.touched)">
+          Data de Fabrico é obrigatória.
+        </div>
+  
+        <label for="dataValidade">Data de Validade:</label>
+        <input
+          type="date"
+          id="dataValidade"
+          [(ngModel)]="produto.dataValidade"
+          name="dataValidade"
+          required
+          #dataValidade="ngModel" />
+        <div class="error" *ngIf="dataValidade.invalid && (dataValidade.dirty || dataValidade.touched)">
+          Data de Validade é obrigatória.
+        </div>
+  
+        <label for="categProduto">Categoria do Produto:</label>
+        <input
+          type="text"
+          id="categProduto"
+          [(ngModel)]="produto.categProduto"
+          name="categProduto"
+          required
+          #categProduto="ngModel" />
+        <div class="error" *ngIf="categProduto.invalid && (categProduto.dirty || categProduto.touched)">
+          Categoria do Produto é obrigatória.
+        </div>
+  
+        <button type="submit" [disabled]="produtoForm.invalid">{{ editMode ? 'Salvar Alterações' : 'Salvar Produto' }}</button>
+        <button type="button" *ngIf="editMode" (click)="resetForm()">Cancelar Alteração</button>
+      </form>
+    </div>
+
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button" >&times;</span>
+        <p>{{ mensagemSucesso }}</p>
+      </div>
+    </div>
+    
+
+    <div class="produto-lista">
+      <h2>Lista de Produtos</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Número de Registro</th>
+            <th>Nome do Produto</th>
+            <th>BP</th>
+            <th>Data de Fabrico</th>
+            <th>Data de Validade</th>
+            <th>Categoria</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let produto of produtos">
+            <td>{{ produto.nrRegisto }}</td>
+            <td>{{ produto.nomeProduto }}</td>
+            <td>{{ produto.bp }}</td>
+            <td>{{ produto.dataFabrico | date }}</td>
+            <td>{{ produto.dataValidade | date }}</td>
+            <td>{{ produto.categProduto }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  </div>
+  

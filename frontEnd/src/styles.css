@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra */
+    background-color: #f1f1f1; /* Fundo do scrollbar */
+  }
+  
+  /* Cor do "track" (trilho) */
+  ::-webkit-scrollbar-track {
+    background-color: #e6e6e6; /* Trilho */
+  }
+  
+  /* Cor do "thumb" (polegar) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #28a745; /* Cor do polegar (barra de rolagem) */
+    border-radius: 6px; /* Borda arredondada */
+  }
+  
+  /* Cor ao passar o mouse sobre o "thumb" */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #218838; /* Cor ao passar o mouse */
+  }
+  .rolagem-noticias {
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.rolagem-noticias ul {
+    display: flex;
+    animation: rolarNoticias 10s linear infinite;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rolagem-noticias li {
+    margin-right: 30px;
+    font-size: 16px;
+    color: #333;
+    white-space: nowrap;
+}
+
+@keyframes rolarNoticias {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,101 @@
+/* Estilo Geral */
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #2d6a4f, #1b4332); /* Fundo verde profissional */
+}
+
+.login-container-admin {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff; /* Fundo branco */
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  animation: fade-in 1s ease; /* Animação de entrada */
+}
+
+.form-wrapper-admin {
+  text-align: center;
+}
+
+.admin-login-title {
+  font-size: 28px;
+  color: #1b4332; /* Verde escuro */
+  margin-bottom: 10px;
+  animation: slide-down 0.8s ease forwards;
+}
+
+.admin-login-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+  animation: slide-down 1s ease forwards;
+}
+
+.admin-input-group {
+  margin-bottom: 20px;
+}
+
+.admin-input-group label {
+  font-size: 14px;
+  color: #1b4332;
+}
+
+.admin-input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-input-group input:focus {
+  border-color: #2d6a4f; /* Verde mais claro no foco */
+  box-shadow: 0 0 5px rgba(45, 106, 79, 0.5);
+}
+
+/* Botão de Login */
+.admin-login-btn {
+  width: 100%;
+  padding: 10px;
+  background: #2d6a4f; /* Verde médio */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.admin-login-btn:hover {
+  background-color: #1b4332; /* Verde escuro no hover */
+  transform: scale(1.05); /* Suave aumento no hover */
+}
+
+/* Animações */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,227 @@
+/* Estilo Geral */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9; /* Cinza claro para um visual limpo */
+    color: #333;
+  }
+  
+  /* Container Principal */
+  .produto-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Cabeçalho */
+  .produto-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .produto-header h1 {
+    color: #006d45; /* Verde escuro */
+  }
+  
+  /* Formulário */
+  .produto-form {
+    margin-bottom: 30px;
+  }
+  
+  .produto-form h2 {
+    color: #006d45;
+    margin-bottom: 10px;
+  }
+  
+  .produto-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .produto-form input,
+  .produto-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .produto-form button {
+    margin-top: 15px;
+    background-color: #006d45;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .produto-form button:hover {
+    background-color: #004d34;
+  }
+  
+  /* Lista */
+  .produto-list h2 {
+    color: #006d45;
+    margin-bottom: 15px;
+  }
+  
+  .produto-list table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .produto-list th,
+  .produto-list td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .produto-list th {
+    background-color: #006d45;
+    color: white;
+  }
+  
+  .produto-list td {
+    background-color: #f9f9f9;
+  }
+  
+  .produto-list tr:hover td {
+    background-color: #e6f2ed;
+  }
+  
+  .produto-list .actions button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .produto-list .actions button:nth-child(1) {
+    background-color: #004d34;
+    color: white;
+  }
+  
+  .produto-list .actions button:nth-child(1):hover {
+    background-color: #00291f;
+  }
+  
+  .produto-list .actions button:nth-child(2) {
+    background-color: #a00000;
+    color: white;
+  }
+  
+  .produto-list .actions button:nth-child(2):hover {
+    background-color: #700000;
+  }
+  .error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  .produto-lista {
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    max-width: 90%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  .produto-lista h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin: 20px 0;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  th, td {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:hover {
+    background-color: #e9ecef;
+  }
+  
+  td {
+    color: #555;
+    font-size: 14px;
+  }
+  
+  thead th {
+    font-size: 16px;
+  }
+  
+  .modal {
+    display: none; /* Modal inicialmente invisível */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close-button:hover,
+  .close-button:focus {
+    color: #000;
+    text-decoration: none;
+  }
+  

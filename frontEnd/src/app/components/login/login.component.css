@@ -1,0 +1,139 @@
+/* Modal geral */
+.login-modal {
+    background-color: #f1f8f5; /* Verde claro, agradável aos olhos */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
+    padding: 20px 30px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Cabeçalho */
+  .modal-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .modal-title {
+    color: #006d45; /* Verde escuro para contraste */
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+  
+  /* Formulário */
+  .login-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .login-form label {
+    display: block;
+    color: #006d45;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .login-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #a6d8c3; /* Verde mais claro */
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .login-form .form-control:focus {
+    border-color: #006d45;
+    box-shadow: 0px 0px 5px rgba(0, 109, 69, 0.5);
+    outline: none;
+  }
+  
+  /* Senha */
+  .password-input {
+    position: relative;
+  }
+  
+  .password-input .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #006d45;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .password-input .toggle-password:hover {
+    color: #004d34; /* Verde mais escuro no hover */
+  }
+  
+  /* Esquecer senha */
+  .forgot-password {
+    display: block;
+    margin-top: 10px;
+    color: #006d45;
+    text-align: right;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+    color: #004d34;
+  }
+  
+  /* Botão de Login */
+  .btn-login {
+    background-color: #006d45; /* Verde principal */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-login:hover {
+    background-color: #004d34;
+    transform: translateY(-2px);
+  }
+  
+  .btn-login:active {
+    background-color: #00331f;
+    transform: translateY(1px);
+  }
+  
+  /* Mobile Responsivo */
+  @media (max-width: 576px) {
+    .login-modal {
+      padding: 15px;
+    }
+    .modal-title {
+      font-size: 1.5rem;
+    }
+    .btn-login {
+      font-size: 1rem;
+    }
+  }
+  /* Seção de Registro */
+.register-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.register-text {
+  color: #006d45;
+  font-size: 0.95rem;
+}
+
+.register-text a {
+  color: #004d34;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}

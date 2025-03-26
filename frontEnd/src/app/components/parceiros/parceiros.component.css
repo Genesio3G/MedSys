@@ -1,0 +1,46 @@
+/* Seção de Parcerias */
+.partners {
+    padding: 2rem;
+    background-color: #fff; /* Fundo branco */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(192, 36, 36, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+  
+.partners h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #28a745; /* Verde Saúde */
+}
+  
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+  
+.partner-logos img {
+    width: 200px; /* Aumentado para maior destaque */
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #28a745; /* Adiciona uma borda verde */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adiciona sombra para destacar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+  
+.partner-logos img:hover {
+    transform: scale(1.2); /* Mais zoom ao passar o mouse */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Sombra mais intensa ao passar o mouse */
+}
+  
+/* Barra verde vertical no final */
+.green-bar {
+    width: 10px; /* Largura da barra */
+    height: 100%; /* Altura total */
+    background-color: #28a745; /* Verde Saúde */
+    position: absolute;
+    right: 0; /* Alinha a barra à direita */
+    top: 0;
+}

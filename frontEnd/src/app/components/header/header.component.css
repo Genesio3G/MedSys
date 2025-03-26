@@ -1,0 +1,116 @@
+/* Estilos Gerais do Header */
+.header {
+  background: linear-gradient(135deg, #28a745, #218838); /* Gradiente verde */
+  color: #ffffff; /* Texto branco */
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden; /* Para garantir que as bolhas não saiam do header */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #c1e1c1; /* Cor ao passar o mouse */
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo sutil ao passar o mouse */
+  color: #c1e1c1; /* Cor ao passar o mouse */
+}
+
+.btn-login {
+  background-color: #c1e1c1; /* Cor vibrante para o botão */
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #b0d8b0; /* Cor ao passar o mouse */
+  transform: translateY(-2px); /* Efeito de movimento */
+}
+
+/* Efeito de Bolhas no Header */
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 200%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3) 10%, transparent 10%);
+  background-size: 20px 20px;
+  animation: bubbles 25s linear infinite;
+  opacity: 0.5;
+  z-index: 0;
+  transform: translateX(-50%);
+}
+
+@keyframes bubbles {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1000px);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-login {
+    width: 100%;
+    text-align: center;
+  }
+}

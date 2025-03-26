@@ -1,0 +1,13 @@
+<div class="envoltório-apresentacao-slides">
+    <div class="apresentacao-slides">
+        <img
+            *ngFor="let imagem of imagensSlides; let i = index"
+            [src]="imagensSlides[indiceSlideAtual]"
+            [class.slide-ativo]="i === indiceSlideAtual"
+            alt="Slide {{ i + 1 }}"
+            class="imagem-apresentacao"
+        />
+    </div>
+</div>
+
+    

@@ -1,0 +1,9 @@
+.footer {
+    background-color: #69a77c; /* Verde suave */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border-top: 3px solid #558f69; /* Destaque com borda superior */
+  }
+  

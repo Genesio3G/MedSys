@@ -1,0 +1,72 @@
+/* Main Content */
+.main-content {
+    margin-left: 250px; /* Ajuste para header vertical */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f1faee; /* Azul bem claro */
+    min-height: 100vh; /* Altura total */
+  }
+  
+  .dashboard-overview {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .dashboard-overview h2 {
+    color: #457b9d; /* Azul médio */
+    font-size: 28px;
+  }
+  
+  .dashboard-overview p {
+    font-size: 16px;
+    color: #333; /* Texto em cinza escuro */
+  }
+  
+  /* Dashboard Actions */
+  .dashboard-actions {
+    display: flex;
+    justify-content: space-around; /* Espaçamento entre cartões */
+    gap: 20px;
+    flex-wrap: wrap; /* Ajusta para telas menores */
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .action-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  .action-card h3 {
+    color: #457b9d; /* Azul médio */
+    margin-bottom: 10px;
+  }
+  
+  .action-card p {
+    font-size: 14px;
+    color: #666; /* Texto cinza */
+    margin-bottom: 15px;
+  }
+  
+  .action-card .btn {
+    background-color: #457b9d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .action-card .btn:hover {
+    background-color: #1d3557; /* Azul escuro */
+  }
+  

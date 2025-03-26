@@ -1,0 +1,230 @@
+/* Modal com altura dinâmica e rolagem fixa */
+#modalMedical {
+    width: 80vw; /* Ocupa 80% da largura da tela */
+    margin: 0; /* Remove margens */
+    max-width: none; /* Remove qualquer limitação de largura */
+    position: fixed; /* Fixa a modal na tela */
+    top: 10vh; /* Centraliza verticalmente */
+    left: 10vw; /* Centraliza horizontalmente */
+    z-index: 1050; /* Garante que a modal fique acima de outros elementos */
+    overflow: hidden; /* Evita que o conteúdo vaze */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  }
+  
+  /* Conteúdo da Modal */
+  .modal-content {
+    width: 100%; /* Ocupa 100% da largura da modal */
+    background: #f8f9fa; /* Fundo claro */
+    height: 100%; /* Ocupa 100% da altura da modal */
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll; /* Rolagem fixa */
+  }
+  
+  /* Cabeçalho da Modal */
+  .modal-header {
+    background: linear-gradient(90deg, #4b79a1, #283e51);
+    color: white;
+    border-bottom: none;
+    padding: 1.5rem;
+    position: sticky; /* Fixa o cabeçalho no topo */
+    top: 0;
+    z-index: 1; /* Garante que o cabeçalho fique acima do conteúdo */
+  }
+  
+  .modal-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .btn-close {
+    filter: invert(1); /* Inverte a cor do ícone de fechar */
+  }
+  
+  /* Campo de Pesquisa Estilizado */
+  .search-bar {
+    margin-bottom: 1rem; /* Reduzi o espaçamento inferior */
+    position: relative;
+  }
+  
+  .search-input {
+    border: 2px solid #4b79a1;
+    border-radius: 20px; /* Bordas mais arredondadas */
+    padding: 8px 16px 8px 32px; /* Reduzi o padding */
+    font-size: 0.9rem; /* Reduzi o tamanho da fonte */
+    width: 70%;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-input:focus {
+    border-color: #283e51;
+    box-shadow: 0 0 10px rgba(75, 121, 161, 0.5);
+    outline: none;
+  }
+  
+  /* Ícone de pesquisa dentro do input */
+  .search-bar::before {
+    content: "🔍";
+    position: absolute;
+    left: 10px; /* Ajustei a posição do ícone */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem; /* Reduzi o tamanho do ícone */
+    color: #4b79a1;
+    pointer-events: none;
+  }
+  
+  /* Corpo da Modal */
+  .modal-body {
+    flex: 1; /* Ocupa o espaço restante */
+    overflow-y: auto; /* Adiciona rolagem vertical */
+    padding: 1.5rem;
+    padding-right: 17px; /* Compensa a largura da barra de rolagem */
+  }
+  
+  /* Lista de Medicamentos em Grade */
+  .medicamentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Cartões menores */
+    gap: 1rem; /* Espaçamento entre os itens */
+  }
+  
+  /* Cartões de Medicamentos Reduzidos */
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    height: 100%; /* Garante que todos os cartões tenham a mesma altura */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Efeito de hover */
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: 100px; /* Reduzi a altura das imagens */
+    object-fit: cover; /* Garante que a imagem cubra o espaço */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .card-body {
+    padding: 0.75rem; /* Reduzi o padding */
+    flex: 1;
+  }
+  
+  .card-title {
+    font-size: 1.1rem; /* Reduzi o tamanho da fonte */
+    color: #4b79a1;
+    margin-bottom: 0.5rem; /* Reduzi o espaçamento */
+  }
+  
+  .card-text {
+    font-size: 0.85rem; /* Reduzi o tamanho da fonte */
+    color: #666;
+    margin-bottom: 0.5rem; /* Reduzi o espaçamento */
+  }
+  
+  .card-footer {
+    background-color: #f8f9fa;
+    border-top: none;
+    padding: 0.5rem; /* Reduzi o padding */
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Rodapé da Modal */
+  .modal-footer {
+    background-color: #f8f9fa;
+    border-top: none;
+    padding: 1rem;
+    text-align: right;
+    position: sticky; /* Fixa o rodapé na parte inferior */
+    bottom: 0;
+    z-index: 1; /* Garante que o rodapé fique acima do conteúdo */
+  }
+  /* Estilo do Botão "Ver Detalhes" */
+.btn-primary {
+    background-color: #4b79a1; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 25px; /* Bordas arredondadas */
+    padding: 8px 20px; /* Espaçamento interno */
+    font-size: 0.9rem; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: all 0.3s ease; /* Transição suave */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+  }
+  
+  /* Efeito de hover no botão */
+  .btn-primary:hover {
+    background-color: #283e51; /* Cor de fundo ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de elevação */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+  }
+  
+  /* Efeito de clique no botão */
+  .btn-primary:active {
+    transform: translateY(0); /* Remove a elevação ao clicar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra normal */
+  }
+  /* Estilo do Botão "Fechar" */
+.btn-close {
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Remove a borda */
+    color: white; /* Cor do ícone */
+    font-size: 1.5rem; /* Tamanho do ícone */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: all 0.3s ease; /* Transição suave */
+    padding: 0.5rem; /* Espaçamento interno */
+    border-radius: 50%; /* Bordas arredondadas */
+    width: 40px; /* Largura fixa */
+    height: 40px; /* Altura fixa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Efeito de hover no botão "Fechar" */
+  .btn-close:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo branco semi-transparente */
+    transform: scale(1.1); /* Aumenta levemente o tamanho */
+  }
+  
+  /* Efeito de clique no botão "Fechar" */
+  .btn-close:active {
+    transform: scale(0.9); /* Reduz levemente o tamanho ao clicar */
+  }/* Estilo do Botão "Fechar" no Rodapé */
+.btn-secondary {
+    background-color: #6c757d; /* Cor de fundo cinza */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 25px; /* Bordas arredondadas */
+    padding: 8px 20px; /* Espaçamento interno */
+    font-size: 0.9rem; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: all 0.3s ease; /* Transição suave */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+  }
+  
+  /* Efeito de hover no botão "Fechar" */
+  .btn-secondary:hover {
+    background-color: #a21717; /* Cor de fundo mais escura ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de elevação */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+  }
+  
+  /* Efeito de clique no botão "Fechar" */
+  .btn-secondary:active {
+    transform: translateY(0); /* Remove a elevação ao clicar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra normal */
+  }
