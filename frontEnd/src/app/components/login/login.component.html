@@ -1,4 +1,4 @@
-<div class="login-modal">
+<div class="login-modal" *ngIf="showModal">
   <div class="modal-header">
     <h2 class="modal-title">🔐 Login de Medicamentos</h2>
   </div>
@@ -39,7 +39,7 @@
     <p class="register-text">Não tem uma conta? <a href="#" (click)="onRegister()">Registre-se</a></p>
   </div>
     <a href="#" class="forgot-password">Esqueceu a senha?</a>
-    <button type="submit" class="btn-login">Entrar</button>
+    <button type="button" (click)="onSubmit()" class="btn-login">Entrar</button>
   </form>
 
  

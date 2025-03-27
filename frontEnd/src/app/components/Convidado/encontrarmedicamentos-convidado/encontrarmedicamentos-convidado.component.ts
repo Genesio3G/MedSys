@@ -9,9 +9,9 @@ import { Component } from '@angular/core';
 export class EncontrarmedicamentosConvidadoComponent {
   termoPesquisa: string = '';
   medicamentos = [
-    { nome: 'Medicamento A', preco: 25.00, farmacia: 'Farmácia Central' },
-    { nome: 'Medicamento B', preco: 15.00, farmacia: 'Farmácia Bem-Estar' },
-    { nome: 'Medicamento C', preco: 30.00, farmacia: 'Farmácia Popular' },
+    { nome: 'Medicamento A', preco: 25.00, farmacia: 'Farmácia Central', imagem: 'assets/images/medicamento-a.jpg' },
+    { nome: 'Medicamento B', preco: 15.00, farmacia: 'Farmácia Bem-Estar', imagem: 'assets/images/medicamento-b.jpg' },
+    { nome: 'Medicamento C', preco: 30.00, farmacia: 'Farmácia Popular', imagem: 'assets/images/medicamento-c.jpg' },
   ];
 
   buscarMedicamentos(): void {

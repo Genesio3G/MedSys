@@ -1,18 +1,26 @@
 <app-header-convidado></app-header-convidado>
 <main class="main-content">
+  <!-- Título e Descrição -->
   <section class="overview">
     <h2>Encontre Medicamentos</h2>
     <p>Pesquise medicamentos disponíveis em farmácias próximas.</p>
   </section>
+  
+  <!-- Campo de Pesquisa -->
   <section class="search-section">
     <input type="text" placeholder="Digite o nome do medicamento..." [(ngModel)]="termoPesquisa" class="search-input">
     <button class="search-btn" (click)="buscarMedicamentos()">Buscar</button>
   </section>
+  
+  <!-- Lista de Medicamentos -->
   <section class="medicines-list">
     <div *ngFor="let medicamento of medicamentos" class="medicine-card">
-      <h3>{{ medicamento.nome }}</h3>
-      <p><strong>Preço:</strong> R$ {{ medicamento.preco }}</p>
-      <p><strong>Disponível em:</strong> {{ medicamento.farmacia }}</p>
+      <img [src]="medicamento.imagem" alt="Imagem do Medicamento" class="medicine-image">
+      <div class="medicine-details">
+        <h3 class="medicine-name">{{ medicamento.nome }}</h3>
+        <p class="medicine-price"><strong>Preço:</strong> R$ {{ medicamento.preco }}</p>
+        <p class="medicine-location"><strong>Disponível em:</strong> {{ medicamento.farmacia }}</p>
+      </div>
     </div>
   </section>
 </main>

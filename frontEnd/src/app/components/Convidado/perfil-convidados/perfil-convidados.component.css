@@ -1,113 +1,89 @@
 /* Main Content */
 .main-content {
-    margin-left: 250px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
-    background-color: #f7faf8; /* Fundo suave */
-  }
-  
-  /* Overview Section */
-  .overview {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .overview h2 {
-    font-size: 28px;
-    color: #69a77c; /* Verde Suave */
-  }
-  
-  .overview p {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  /* Input Section */
-  .search-section {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .search-input {
-    width: 300px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .search-btn {
-    background-color: #69a77c; /* Verde Suave */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .search-btn:hover {
-    background-color: #558f69; /* Verde mais escuro */
-  }
-  
-  /* Cards */
-  .medicine-card,
-  .location-card {
-    background-color: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 15px;
-    text-align: left;
-  }
-  
-  .medicine-card h3,
-  .location-card h3 {
-    font-size: 18px;
-    color: #69a77c; /* Verde Suave */
-    margin-bottom: 8px;
-  }
-  
-  .medicine-card p,
-  .location-card p {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 5px;
-  }
-  
-  /* Profile Section */
-  .profile-form label {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 8px;
-  }
-  
-  .profile-form input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 15px;
-  }
-  
-  .save-btn {
-    background-color: #69a77c; /* Verde Suave */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 12px 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .save-btn:hover {
-    background-color: #558f69; /* Verde mais escuro */
-  }
-  
+  margin-left: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-color: #f7faf8; /* Fundo Suave */
+}
+
+/* Overview Section */
+.overview {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.overview h2 {
+  font-size: 28px;
+  color: #69a77c; /* Verde Suave */
+}
+
+.overview p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Formulário de Perfil */
+.profile-section {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.profile-form label {
+  display: block;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.profile-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Botão Salvar */
+.save-btn {
+  background-color: #69a77c; /* Verde Suave */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #558f69; /* Verde Mais Escuro */
+  transform: scale(1.05);
+}
+
+/* Foto de Perfil */
+.profile-photo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.photo-input {
+  font-size: 14px;
+  margin-top: 5px;
+}
