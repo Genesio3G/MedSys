@@ -1,0 +1,32 @@
+<app-header-convidado></app-header-convidado>
+<main class="main-content">
+  <section class="overview">
+    <h2>Consultas Médicas</h2>
+    <p>Agende sua consulta e escolha entre clínicas e hospitais disponíveis.</p>
+  </section>
+  <!-- Formulário de Agendamento -->
+  <section class="consultation-scheduler">
+    <form class="schedule-form">
+      <label for="specialty">Especialidade:</label>
+      <select id="specialty" name="specialty">
+        <option value="clinico">Clínico Geral</option>
+        <option value="dermatologia">Dermatologia</option>
+        <option value="cardiologia">Cardiologia</option>
+      </select>
+      <label for="date">Data:</label>
+      <input type="date" id="date" name="date">
+      <label for="time">Horário:</label>
+      <input type="time" id="time" name="time" >
+      <button type="submit" class="schedule-btn">Agendar Consulta</button>
+    </form>
+  </section>
+  <!-- Botão para Ver Histórico -->
+<section class="history-button-section">
+    <button class="history-btn" (click)="verHistorico()">Ver Histórico de Consultas</button>
+  </section>
+  <!-- Clínicas e Hospitais Disponíveis -->
+  <section class="history-button-section">
+    <button class="history-btn" (click)="verHistorico()">Clínicas e Hospitais Disponíveis</button>
+  </section>
+</main>
+

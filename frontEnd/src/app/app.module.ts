@@ -47,6 +47,13 @@ import { HomeConvidadoComponent } from './components/Convidado/home-convidado/ho
 import { HomeMedicosComponent } from './components/Medicos/home-medicos/home-medicos.component';
 import { LoginMedicosComponent } from './components/Medicos/login-medicos/login-medicos.component';
 import { LoginAdministradorComponent } from './components/Administrador/login-administrador/login-administrador.component';
+import { RecomendacoesConvidadoComponent } from './components/Convidado/recomendacoes-convidado/recomendacoes-convidado.component';
+import { CarrinhoConvidadoComponent } from './components/Convidado/carrinho-convidado/carrinho-convidado.component';
+import { HistoricoConvidadoComponent } from './components/Convidado/historico-convidado/historico-convidado.component';
+import { ConsultosConvidadoComponent } from './components/Convidado/consultos-convidado/consultos-convidado.component';
+import { EncontrarmedicamentosConvidadoComponent } from './components/Convidado/encontrarmedicamentos-convidado/encontrarmedicamentos-convidado.component';
+import { PerfilConvidadosComponent } from './components/Convidado/perfil-convidados/perfil-convidados.component';
+import { EncontrarcentromedicoConvidadoComponent } from './components/Convidado/encontrarcentromedico-convidado/encontrarcentromedico-convidado.component';
 
 
 @NgModule({
@@ -93,6 +100,13 @@ import { LoginAdministradorComponent } from './components/Administrador/login-ad
     HomeMedicosComponent,
     LoginMedicosComponent,
     LoginAdministradorComponent,
+    RecomendacoesConvidadoComponent,
+    CarrinhoConvidadoComponent,
+    HistoricoConvidadoComponent,
+    ConsultosConvidadoComponent,
+    EncontrarmedicamentosConvidadoComponent,
+    PerfilConvidadosComponent,
+    EncontrarcentromedicoConvidadoComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,67 @@
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: #f7faf8;
+    box-sizing: border-box;
+  }
+  
+  /* Overview Section */
+  .overview {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .overview h2 {
+    color: #69a77c;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .overview p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Recommendations Section */
+  .recommendations {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .recommendation-block {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .recommendation-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .recommendation-block h3 {
+    color: #69a77c;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .recommendation-block p {
+    font-size: 14px;
+    color: #666;
+  }
+  

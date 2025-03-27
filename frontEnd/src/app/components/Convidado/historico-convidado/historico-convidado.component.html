@@ -1,0 +1,29 @@
+<app-header-convidado></app-header-convidado>
+<main class="main-content">
+  <section class="overview">
+    <h2>Histórico de Pedidos</h2>
+    <p>Acompanhe seus pedidos anteriores de medicamentos.</p>
+  </section>
+  <section class="order-history">
+    <table class="order-table">
+      <thead>
+        <tr>
+          <th>Data do Pedido</th>
+          <th>Medicamento</th>
+          <th>Quantidade</th>
+          <th>Preço Total</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pedido of pedidos">
+          <td>{{ pedido.data }}</td>
+          <td>{{ pedido.medicamento }}</td>
+          <td>{{ pedido.quantidade }}</td>
+          <td>R$ {{ pedido.precoTotal }}</td>
+          <td class="{{ pedido.status }}">{{ pedido.status }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>

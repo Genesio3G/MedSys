@@ -11,9 +11,17 @@ import { AdministradorMedicamentosComponent } from './components/administrador-m
 
 
 import { HomeConvidadoComponent } from './components/Convidado/home-convidado/home-convidado.component';
+import { RecomendacoesConvidadoComponent } from './components/Convidado/recomendacoes-convidado/recomendacoes-convidado.component';
+import { CarrinhoConvidadoComponent } from './components/Convidado/carrinho-convidado/carrinho-convidado.component';
+import { HistoricoConvidadoComponent } from './components/Convidado/historico-convidado/historico-convidado.component';
+import { ConsultosConvidadoComponent } from './components/Convidado/consultos-convidado/consultos-convidado.component';
+import { EncontrarcentromedicoConvidadoComponent } from './components/Convidado/encontrarcentromedico-convidado/encontrarcentromedico-convidado.component';
+import { EncontrarmedicamentosConvidadoComponent } from './components/Convidado/encontrarmedicamentos-convidado/encontrarmedicamentos-convidado.component';
+import { PerfilConvidadosComponent } from './components/Convidado/perfil-convidados/perfil-convidados.component';
 
 import { HomeMedicosComponent } from './components/Medicos/home-medicos/home-medicos.component';
 import { LoginMedicosComponent } from './components/Medicos/login-medicos/login-medicos.component';
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'Login-Administrador', component: LoginAdministradorComponent, title:'Login | Administrador'},
@@ -23,6 +31,14 @@ const routes: Routes = [
   { path: 'admin-pagina-medicos', component: CrudMedicosComponent, title:'Administrador | Medicos' },
   { path: 'admin-pagina-hospitais', component: CrudHospitaisComponent, title:'Administrador | Hospitais'},
   { path: 'convidados-home', component: HomeConvidadoComponent, title:'Convidados | Pagina Inicial'},
+  { path: 'convidados-recomendacoes', component: RecomendacoesConvidadoComponent, title:'Convidados | Pagina Inicial'},
+  { path: 'convidados-carrinho', component: CarrinhoConvidadoComponent, title:'Convidados | Pagina Inicial'},
+  { path: 'convidados-historico', component: HistoricoConvidadoComponent, title:'Convidados | Pagina Inicial'},
+  { path: 'convidados-consultas', component: ConsultosConvidadoComponent, title:'Convidados | Pagina Inicial'},
+  { path: 'convidados-encontrar-centro-de-saude', component: EncontrarcentromedicoConvidadoComponent, title:'Convidados | Pagina Inicial'},
+  { path: 'convidados-encontrar-medicamentos', component: EncontrarmedicamentosConvidadoComponent, title:'Convidados | Pagina Inicial'},
+  { path: 'convidados-perfil', component: PerfilConvidadosComponent, title:'Convidados | Pagina Inicial'},
+  
   { path: 'medicos-home', component: HomeMedicosComponent, title:'Medicos | Pagina Inicial'},
   { path: 'Login-Medicos', component: LoginMedicosComponent, title:'Login | Medicos'},
 

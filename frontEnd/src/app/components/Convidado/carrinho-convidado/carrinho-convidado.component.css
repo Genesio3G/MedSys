@@ -1,0 +1,183 @@
+/* Main Content */
+.main-content {
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f7faf8; /* Fundo suave */
+  }
+  
+  /* Carrinho no Centro */
+  .cart-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .cart-widget {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .cart-icon {
+    font-size: 50px;
+    color: #69a77c; /* Verde suave */
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    background-color: #ff5252;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Campo de Pesquisa */
+  .search-section {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .search-input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .search-btn {
+    background-color: #69a77c; /* Verde suave */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .search-btn:hover {
+    background-color: #558f69; /* Verde mais escuro */
+  }
+  
+  /* Medicamentos em Grade */
+  .product-section {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .product-title {
+    font-size: 32px;
+    color: #69a77c; /* Verde suave */
+  }
+  
+  .product-subtitle {
+    font-size: 18px;
+    color: #558f69; /* Verde mais escuro */
+    margin-bottom: 20px;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 produtos por linha */
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .product-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 120px; /* Menor tamanho */
+    object-fit: cover;
+  }
+  
+  .product-content {
+    padding: 15px;
+  }
+  
+  .product-name {
+    font-size: 16px;
+    color: #69a77c; /* Verde suave */
+    margin-bottom: 8px;
+  }
+  
+  .product-price {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .product-location {
+    font-size: 14px;
+    color: #558f69; /* Verde escuro */
+    margin-bottom: 15px;
+  }
+  
+  .add-to-cart-btn {
+    background-color: #69a77c; /* Verde suave */
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #558f69; /* Verde mais escuro */
+  }
+  
+  /* Botão Efetuar Compra */
+  .checkout-btn {
+    display: block;
+    margin: 20px auto; /* Centraliza o botão */
+    padding: 15px 30px; /* Espaçamento interno maior */
+    background-color: #69a77c; /* Verde suave */
+    color: white;
+    border: none;
+    border-radius: 25px; /* Bordas arredondadas */
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase; /* Texto em maiúsculas */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leve sombra */
+  }
+  
+  .checkout-btn:hover {
+    background-color: #558f69; /* Verde mais escuro */
+    transform: scale(1.05); /* Efeito de crescimento */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Sombra mais evidente */
+  }
+  
+  .checkout-btn:active {
+    transform: scale(0.98); /* Leve redução ao clicar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reduzida */
+  }
+  

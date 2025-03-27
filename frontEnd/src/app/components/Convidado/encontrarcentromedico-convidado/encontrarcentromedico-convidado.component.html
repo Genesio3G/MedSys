@@ -1,0 +1,31 @@
+<app-header-convidado></app-header-convidado>
+<main class="main-content">
+  <!-- Título e Descrição -->
+  <section class="overview">
+    <h2>Encontre Hospitais, Clínicas e Farmácias</h2>
+    <p>Veja as opções disponíveis próximos a você.</p>
+  </section>
+  
+  <!-- Campo de Pesquisa -->
+  <section class="search-section">
+    <input type="text" placeholder="Digite o nome ou endereço..." [(ngModel)]="termoPesquisa" class="search-input">
+    <button class="search-btn" (click)="procurarLocais()">Buscar</button>
+  </section>
+  
+  <!-- Botão para Procurar Farmácias Próximas -->
+  <section class="nearby-facilities">
+    <button class="nearby-btn" (click)="procurarFarmacias()">Procurar Farmácias Próximas</button>
+  </section>
+  
+  <!-- Lista de Locais -->
+  <section class="locations-list">
+    <div *ngFor="let local of locaisFiltrados" class="location-card">
+      <img [src]="local.imagem" alt="Imagem do Local" class="location-image">
+      <div class="location-content">
+        <h3 class="location-name">{{ local.nome }}</h3>
+        <p class="location-address"><strong>Endereço:</strong> {{ local.endereco }}</p>
+        <p class="location-contact"><strong>Contato:</strong> {{ local.contato }}</p>
+      </div>
+    </div>
+  </section>
+</main>

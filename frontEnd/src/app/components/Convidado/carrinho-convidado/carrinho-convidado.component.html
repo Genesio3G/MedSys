@@ -1,0 +1,35 @@
+<app-header-convidado></app-header-convidado>
+<main class="main-content">
+  <!-- Ícone do Carrinho no Centro -->
+  <section class="cart-center">
+    <div class="cart-widget">
+      <span class="cart-icon">🛒</span>
+      <span class="cart-count">{{ quantidadeTotal }}</span>
+    </div>
+  </section>
+  <!-- Campo de Pesquisa -->
+  <section class="search-section">
+    <input type="text" placeholder="Pesquisar medicamentos..." [(ngModel)]="termoPesquisa" class="search-input">
+    <button class="search-btn" (click)="realizarBusca()">Buscar</button>
+  </section>
+  <!-- Lista de Medicamentos -->
+  <section class="product-section">
+    <h2 class="product-title">Medicamentos Disponíveis</h2>
+    <p class="product-subtitle">Encontre medicamentos facilmente</p>
+    <div class="product-grid">
+      <div *ngFor="let produto of produtosFiltrados" class="product-card">
+        <img [src]="produto.imagem" alt="Imagem do Medicamento" class="product-image">
+        <div class="product-content">
+          <h3 class="product-name">{{ produto.nome }}</h3>
+          <p class="product-price"><strong>Preço:</strong> R$ {{ produto.preco }}</p>
+          <p class="product-location"><strong>Localização:</strong> {{ produto.localizacao }}</p>
+          <button class="add-to-cart-btn" (click)="adicionarAoCarrinho(produto)">Adicionar ao Carrinho</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Itens no Carrinho -->
+  <section class="cart-section" *ngIf="itensCarrinho.length > 0">
+    <button class="checkout-btn" (click)="efetuarCompra()">Efetuar Compra</button>
+  </section>
+</main>
