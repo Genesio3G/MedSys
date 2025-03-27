@@ -9,11 +9,11 @@ import { Component } from '@angular/core';
 export class EncontrarcentromedicoConvidadoComponent {
   termoPesquisa: string = '';
   locais = [
-    { nome: 'Clínica Saúde Integral', endereco: 'Rua das Flores, 123', contato: '(11) 1234-5678', imagem: 'assets/images/clinica-saude-integral.jpg' },
-    { nome: 'Hospital Vida', endereco: 'Av. Central, 456', contato: '(11) 8765-4321', imagem: 'assets/images/hospital-vida.jpg' },
-    { nome: 'Farmácia Bem-estar', endereco: 'Praça Verde, 789', contato: '(11) 5555-9999', imagem: 'assets/images/farmacia-bem-estar.jpg' },
-    { nome: 'Hospital Esperança', endereco: 'Rua dos Lírios, 101', contato: '(11) 2222-3333', imagem: 'assets/images/hospital-esperanca.jpg' },
-    { nome: 'Farmácia Popular', endereco: 'Av. das Palmeiras, 102', contato: '(11) 4444-5555', imagem: 'assets/images/farmacia-popular.jpg' },
+    { nome: 'Clínica Girasol', endereco: 'Sagrada Esperança', contato: '(+244) 2222-6666', imagem: 'assets/images/clinica0.jpg' },
+    { nome: 'Luanda Medical Care', endereco: 'Sagrada Esperança', contato: '(+244) 2222-4444', imagem: 'assets/images/clinica1.jpg' },
+    { nome: 'Farmácia Bem-estar', endereco: 'Sagrada Esperança', contato: '(+244) 2222-9999', imagem: 'assets/images/clinica1.jpg' },
+    { nome: 'Hospital Esperança', endereco: 'Sagrada Esperança', contato: '(+244) 2222-3333', imagem: 'assets/images/clinica1.jpg' },
+    { nome: 'Farmácia Popular', endereco: 'Sagrada Esperança', contato: '(+244) 2222-5555', imagem: 'assets/images/clinica0.jpg' },
   ];
   locaisFiltrados = [...this.locais];
 

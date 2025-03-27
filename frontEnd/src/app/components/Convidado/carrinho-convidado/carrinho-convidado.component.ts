@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class CarrinhoConvidadoComponent {
   produtos = [
     { id: 1, nome: 'Medicamento A', descricao: 'Fortalece imunidade.', preco: 25.00, imagem: 'assets/images/medicamento-a.jpg', localizacao:'prenda' },
-    { id: 2, nome: 'Medicamento B', descricao: 'Alivia dores.', preco: 15.00, imagem: 'assets/images/medicamento-b.jpg', localizacao:'prenda' },
+    { id: 2, nome: 'Medicamento B', descricao: 'Alivia dores.', preco: 15.00, imagem: 'assets/images/medicamento-c.jpg', localizacao:'prenda' },
     { id: 3, nome: 'Medicamento C', descricao: 'Melhora a digestão.', preco: 30.00, imagem: 'assets/images/medicamento-c.jpg', localizacao:'prenda' },
     { id: 4, nome: 'Medicamento C', descricao: 'Melhora a digestão.', preco: 30.00, imagem: 'assets/images/medicamento-c.jpg', localizacao:'prenda' },
     
